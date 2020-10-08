@@ -1,0 +1,61 @@
+@import "../../../styles/index.scss";
+.temp-text {
+  @include primary-temp();
+  @include text-shadow-1();
+}
+
+.temp-high-low-text {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  opacity: 0.75;
+  @include text-shadow-1();
+}
+
+.child-1 {
+  border-right: 1px solid #ffffff24;
+  padding: 25px;
+}
+
+img {
+  @include weather-image();
+}
+
+table {
+  @include text-shadow-1();
+}
+.table td {
+  border-top: 1px solid #ffffff75;
+}
+small,
+.small {
+  opacity: 0.8 !important;
+  font-weight: 200 !important;
+}
+mat-grid-tile {
+  background: lightblue;
+}
+
+.chart-widget {
+  padding: 10px 7px;
+  backdrop-filter: brightness(1.15) blur(40px);
+  border-radius: 20px;
+  // border: 1px solid #ffffff73;
+  // box-shadow: 0px 3px 7px 4px #00000014;
+  display: flex;
+  justify-content: center;
+  width: 115px;
+  margin-top: 25px;
+}
+
+.bad {
+  background-color: #ffadad47;
+}
+
+.warning {
+  background-color: rgba(3, 3, 1, 0.278);
+}
+
+.good {
+  background-color: #aed0a047;
+}

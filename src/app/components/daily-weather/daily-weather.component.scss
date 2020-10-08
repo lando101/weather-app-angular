@@ -1,0 +1,103 @@
+@import "../../../styles/index.scss";
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.month-text {
+  font-weight: 400;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.weather-data-container {
+  margin: 0px 20px;
+  padding: 0px 20px;
+  background: #0000000f;
+  border: 1px solid #ffffff40;
+  border-radius: 7px;
+  height: 50px;
+  width: 75%;
+}
+
+.additional-weather-container {
+  margin: 0px 20px;
+  padding: 0px 20px;
+  height: 50px;
+  width: 45%;
+}
+.weather-data-text {
+  font-family: "Inter", sans-serif;
+  color: $font-color !important;
+  @include text-shadow-1();
+  .temp-high {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .weather {
+    width: 162px;
+  }
+  .precip {
+    width: 75px;
+  }
+}
+
+.img-container {
+  // filter: brightness(1) contrast(1.5) saturate(5.5);
+  img {
+    height: 43px;
+    background: transparent;
+    border-radius: 6px;
+    padding: 2px;
+  }
+}
+
+.weather-content {
+  font-family: "Inter", sans-serif;
+  color: $font-color;
+  .larger-temp {
+    .temp {
+      font-size: 4.5rem;
+      font-weight: 300;
+    }
+    .temp-symbol {
+    }
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.light-border {
+  border-right: 1px solid #ffffff24;
+}
+
+.temp-card {
+  padding: 5px;
+  background: #00000014;
+  text-align: center;
+  border-radius: 10px;
+  width: 88px;
+  height: 72px;
+  font-family: "Inter", sans-serif;
+  @include text-shadow-1();
+  small {
+    font-weight: 600;
+    opacity: 0.75;
+    margin-bottom: 8px;
+  }
+  .temp {
+    font-size: 1.65rem;
+    font-weight: 300;
+  }
+}
+
+.gauge {
+  background: #00000014;
+  text-align: center;
+  border-radius: 10px;
+  width: 88px;
+  height: 72px;
+  font-family: "Inter", sans-serif;
+  text-shadow: 0 2px 3px #00000033;
+  padding: 5px;
+}

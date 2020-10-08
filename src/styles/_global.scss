@@ -1,0 +1,90 @@
+@import "./mixins";
+@import "./variables";
+
+// text
+.text-muted {
+  opacity: 0.67 !important;
+  font-weight: 500 !important;
+  color: $font-color !important;
+}
+
+.text-shadow-1 {
+  @include text-shadow-1();
+}
+
+.left-align-text {
+  text-align: left;
+}
+
+.reading-label {
+  font-size: 0.7rem !important;
+  margin-top: 5px !important;
+  transform: translateY(45px) !important;
+}
+
+.reading-block {
+  transform: translateY(23px) !important;
+}
+
+// background themes
+.day-clear {
+  background: linear-gradient(160deg, #4254b0, #7dbae1) !important;
+}
+
+.evening-clear {
+  background: linear-gradient(160deg, #692020, #452f61) !important;
+}
+
+.cloudy {
+  background: linear-gradient(160deg, #4f4f4f, #8a8a8a) !important;
+}
+
+.rainy {
+  background: linear-gradient(160deg, #2b2c32, #565763) !important;
+}
+
+.stormy {
+  background: linear-gradient(160deg, #27242e, #484663) !important;
+}
+
+.night {
+  background: linear-gradient(160deg, #0c0e1a, #2d2b45) !important;
+}
+
+.widget-container {
+  @include widget-container();
+}
+
+// ngx slick carousel
+.slick-dotted.slick-slider {
+  margin-bottom: 10px !important;
+}
+
+.slick-slide {
+  display: block;
+  position: relative;
+  border: 1px solid $opaque-border;
+  display: block;
+  margin: 10px 10px;
+  border-radius: 10px;
+  padding: 12px 0px;
+  background: $bg-color-light;
+}
+
+// scroll
+.scroll {
+  width: 20px;
+  height: 200px;
+  overflow: auto;
+  float: left;
+  margin: 0 10px;
+}
+
+.scroll2::-webkit-scrollbar {
+  width: 18px;
+  background: #e4e4e469;
+}
+
+.scroll2::-webkit-scrollbar-thumb {
+  background: #ffffffab;
+}

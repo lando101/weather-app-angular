@@ -1,0 +1,74 @@
+@import "src/theme/theme-variables";
+@import "../../../styles/index.scss";
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: none;
+  background-color: #35353529 !important;
+  z-index: 9;
+  backdrop-filter: blur(40px) saturate(0.95) brightness(1.1);
+  border-bottom: 1px solid #dbdbdb45;
+}
+
+.brand {
+  color: mat-color($app-primary, "default-contrast");
+  text-decoration: none;
+  padding-right: 1rem;
+  font-family: "Pattaya", sans-serif !important;
+  font-size: 2.1rem;
+  @include text-shadow-1();
+}
+
+svg {
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 50px;
+  background: #d8ff610d;
+  margin-right: 11px;
+}
+
+.menu-button {
+  margin-right: 1rem;
+}
+
+.search {
+  width: 30%;
+}
+
+.loader {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 3rem;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  background-color: #888;
+  left: 0%;
+  right: 100%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}

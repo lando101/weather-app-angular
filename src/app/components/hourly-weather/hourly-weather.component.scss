@@ -1,0 +1,31 @@
+@import "../../../styles/index.scss";
+
+.night {
+  background: #191a299e !important;
+}
+
+img {
+  width: 41px;
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  opacity: 0.5;
+}
+
+.slick-slide {
+  box-shadow: 0px 1px 3px 2px #5757571c;
+}
+
+.icon-angle-correction {
+  transform: rotate(-45deg);
+  font-size: 0.68rem;
+  opacity: 0.58;
+}
+
+.small-text {
+  font-size: 0.75rem;
+}

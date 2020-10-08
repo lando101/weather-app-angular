@@ -1,0 +1,13 @@
+<!-- <p>night-sky works!</p> -->
+<!-- <particles></particles> -->
+<!-- <div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+<div *ngIf="!day">
+  <Particles
+    class="position-fixed w-100 h-100"
+    [id]="id"
+    [options]="particlesOptions"
+    (particlesLoaded)="particlesLoaded($event)"
+  ></Particles>
+</div>

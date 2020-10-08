@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+  padding: 1em;
+}
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+q {
+  font-style: italic;
+  quotes: "« " " »";
+}
+
+.mat-card {
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+  background: transparent !important;
+  box-shadow: none !important;
+}

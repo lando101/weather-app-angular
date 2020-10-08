@@ -1,0 +1,152 @@
+<!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutAlign="space-between">
+  <div class="child-1">
+    <div class="d-flex flex-justify-start align-items-center temp-text">
+     <img src="https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fcloudy%5B1%5D.png?alt=media&token=d72e5964-62fb-4acb-95bf-f67febbccb57">
+      {{ currentWeather?.temp  | temperatureConverter: 'F'  }} <span>&#176;</span>
+    </div>
+    <div class="d-flex flex-justify-start">
+      {{currentWeather?.textDesc}}
+    </div>
+    <div class="d-flex flex-justify-start">
+      <small>
+        Updated {{currentWeather?.timeStamp |  date:'short'}}
+      </small>
+    </div>
+  </div>
+  <div class="child-2">Child 2</div>
+</div> -->
+<div fxFlex fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="25px">
+  <div class="d-flex justify-content-center">
+    <div class="child-1" *ngIf="!isLoading">
+      <!-- {{currentWeather.}} -->
+      <div class="d-flex justify-content-center location-text">
+        <h2 class="d-flex justify-content-center align-items-center">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-geo-alt pr-2 mt-1"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+            />
+            <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          </svg>
+          {{ weatherData.properties.relativeLocation.properties.city }}
+        </h2>
+      </div>
+      <div>
+        <div class="d-flex flex-justify-center align-items-left temp-text">
+          <img src="{{ iconUrl }}" />
+          {{ currentWeatherData?.current.temp | number: '1.0-0' }} <span>&#176;</span>
+        </div>
+        <div class="d-flex justify-content-center text-capitalize temp-high-low-text">
+          <span class="px-0 pr-2"
+            >H: {{ currentWeatherData?.daily[0].temp.max | number: '1.0-0' }}<span>&#176;</span></span
+          >
+          |
+          <span class="px-2 pl-2"
+            >L: {{ currentWeatherData?.daily[0].temp.min | number: '1.0-0' }}<span>&#176;</span></span
+          >
+        </div>
+        <div class="d-flex justify-content-center text-capitalize text-shadow-1">
+          {{ currentWeatherData?.current.weather[0].description }}
+        </div>
+        <div class="d-flex justify-content-center">
+          <small> Updated today at {{ currentWeatherData?.current.dt * 1000 | date: 'shortTime' }} </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center w-50">
+    <table class="table text-white w-100 m-0">
+      <tbody>
+        <tr>
+          <!-- <th scope="row">1</th> -->
+          <td class="left-align-text p-1 border-top-0">
+            <small>Sunrise</small>
+            <div>{{ currentWeatherData?.current.sunrise * 1000 | date: 'shortTime' }}</div>
+          </td>
+          <td class="left-align-text p-1 border-top-0">
+            <small>Sunset</small>
+            <div>{{ currentWeatherData?.current.sunset * 1000 | date: 'shortTime' }}</div>
+          </td>
+          <td class="left-align-text p-1 border-top-none border-top-0">
+            <small>Feels Like</small>
+            <div>{{ currentWeatherData?.current.feels_like | number: '0.0-0' }} <span>&#176;</span></div>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">2</th> -->
+          <td class="left-align-text p-1">
+            <small>Rain</small>
+            <div>{{ currentWeatherData?.current.humidity / 1000 | percent }}</div>
+          </td>
+          <td class="left-align-text p-1">
+            <small>Visibility</small>
+            <div>{{ currentWeatherData?.current.visibility / 1000 | number }} mi</div>
+          </td>
+          <td class="left-align-text p-1">
+            <small>Wind</small>
+            <div>{{ currentWeatherData?.current.wind_speed | number: '0.0-0' }} mph</div>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">3</th> -->
+          <td class="left-align-text p-1">
+            <small>Dew Point</small>
+            <div>{{ currentWeatherData?.current.dew_point | number: '0.0-0' }}<span>&#176;</span></div>
+          </td>
+          <td class="left-align-text p-1">
+            <small>Pressure</small>
+            <div>{{ currentWeatherData?.current.pressure | number: '0.0-2' }} inHg</div>
+          </td>
+          <td class="left-align-text p-1">
+            <small>Conditions</small>
+            <div>{{ currentWeatherData?.current.weather[0].main }}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="left-align-text border-top-0 p-0">
+            <div class="chart-widget">
+              <ngx-gauge
+                [type]="gaugeTypeUV"
+                [value]="gaugeValueUV | number: '0.0-0'"
+                [label]="gaugeLabelUV"
+                [append]="gaugeAppendTextUV"
+                [size]="gaugeSizeUV"
+                [max]="gaugeMaxUV"
+                [type]="gagueTypeUV"
+                [thick]="gagugeThickUV"
+                [cap]="gaugeCapUV"
+                [thresholds]="thresholdConfigUV"
+              >
+              </ngx-gauge>
+            </div>
+          </td>
+          <td class="left-align-text border-top-0 p-0">
+            <div class="chart-widget">
+              <ngx-gauge
+                [type]="gaugeTypeAQI"
+                [value]="gaugeValueAQI"
+                [label]="gaugeLabelAQI"
+                [append]="gaugeAppendTextAQI"
+                [size]="gaugeSizeAQI"
+                [max]="gaugeMaxAQI"
+                [type]="gagueTypeAQI"
+                [thick]="gagugeThickAQI"
+                [cap]="gaugeCapAQI"
+                [thresholds]="thresholdConfigAQI"
+              >
+              </ngx-gauge>
+            </div>
+          </td>
+          <td class="left-align-text border-top-0"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

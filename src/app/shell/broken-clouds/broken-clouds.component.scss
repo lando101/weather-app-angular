@@ -1,0 +1,18 @@
+.large-cloud {
+  width: 50vw;
+  transform: translate(15%, -55%);
+}
+
+.medium-cloud {
+  margin: 20px;
+  width: 29vw;
+  transform: translateY(-56%);
+}
+
+.cloud-container {
+  z-index: -1;
+}
+
+.night-clouds {
+  filter: brightness(0.5);
+}

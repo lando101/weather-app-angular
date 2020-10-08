@@ -1,0 +1,18 @@
+@import "../../../styles/index.scss";
+
+.location-text {
+  @include location-text();
+  @include text-shadow-1();
+}
+
+.date-text {
+  @include date-text();
+}
+
+.weather-dashboard-container {
+  margin: 1rem 0;
+}
+
+svg {
+  opacity: 0.6;
+}
