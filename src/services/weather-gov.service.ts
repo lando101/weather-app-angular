@@ -39,19 +39,19 @@ export class WeatherGovService {
     this.airQuality = new BehaviorSubject<any>('');
     this.searchLocation = new BehaviorSubject<any>('');
   }
-  getAirQualityAPIv2(lat: number, long: number): Observable<string> {
-    let coordinates: CoordinatesContext = {
-      latitude: '',
-      longitude: '',
-    };
-    coordinates.latitude = lat.toString();
-    coordinates.longitude = long.toString();
-    // console.log('TRIED TO GET AIR QUALITY');
-    return this.httpClient.get(routes.quote(coordinates)).pipe(
-      map((body: any) => body.data),
-      catchError(() => of('Error, could not load joke :-('))
-    );
-  }
+  // getAirQualityAPIv2(lat: number, long: number): Observable<string> {
+  //   let coordinates: CoordinatesContext = {
+  //     latitude: '',
+  //     longitude: '',
+  //   };
+  //   coordinates.latitude = lat.toString();
+  //   coordinates.longitude = long.toString();
+  //   // console.log('TRIED TO GET AIR QUALITY');
+  //   return this.httpClient.get(routes.quote(coordinates)).pipe(
+  //     map((body: any) => body.data),
+  //     catchError(() => of('Error, could not load joke :-('))
+  //   );
+  // }
 
   searchWeather(latitude: number, longitude: number): Observable<any> {
     const headers = new HttpHeaders();

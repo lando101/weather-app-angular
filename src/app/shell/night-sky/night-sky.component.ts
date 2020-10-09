@@ -132,6 +132,6 @@ export class NightSkyComponent implements OnInit {
   };
 
   particlesLoaded(container: Container): void {
-    console.log(container);
+    // console.log(container);
   }
 }

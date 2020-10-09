@@ -36,6 +36,6 @@ export class HeaderComponent implements OnInit {
       this.isLoading = event;
     }
 
-    console.log('GOT DATA FROM LOCATION SEARCH');
+    // console.log('GOT DATA FROM LOCATION SEARCH');
   }
 }

@@ -15,13 +15,14 @@ import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // import { LocationSearchComponent } from './components/location-search/location-search.component';
-import { WeatherDashboardComponent } from './components/weather-dashboard/weather-dashboard.component';
-import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
-import { HourlyWeatherComponent } from './components/hourly-weather/hourly-weather.component';
-import { DailyWeatherComponent } from './components/daily-weather/daily-weather.component';
+// import { WeatherDashboardComponent } from './components/weather-dashboard/weather-dashboard.component';
+// import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
+// import { HourlyWeatherComponent } from './components/hourly-weather/hourly-weather.component';
+// import { DailyWeatherComponent } from './components/daily-weather/daily-weather.component';
 import { ParticlesModule } from 'ngx-particle';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { WeatherAlertSheetComponent } from './components/weather-alert-sheet/weather-alert-sheet.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -46,5 +47,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
+  // entryComponents: [WeatherAlertSheetComponent],
 })
 export class AppModule {}

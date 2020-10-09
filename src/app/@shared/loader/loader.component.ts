@@ -17,7 +17,7 @@ export class LoaderComponent implements OnInit {
     this.themeService.getTheme().subscribe((data) => {
       // if (data){
       this.themeLight = data;
-      console.log(this.themeLight + ' :THEME LIGHT');
+      // console.log(this.themeLight + ' :THEME LIGHT');
       // }
     });
   }

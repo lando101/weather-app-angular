@@ -34,14 +34,14 @@ export class ShellComponent implements OnInit, OnDestroy {
       .subscribe(() => this.sidenav?.close());
 
     this.weatherService.getWeatherTheme().subscribe((data) => {
-      console.log(data);
-      console.log('THEME');
+      // console.log(data);
+      // console.log('THEME');
       this.themeConvertor(data);
     });
 
     this.weatherService.getCovidData().subscribe((data) => {
-      console.log(data);
-      console.log('COVID DATA');
+      // console.log(data);
+      // console.log('COVID DATA');
     });
 
     // this.weatherService.getWeatherTheme().subscribe(data => {
@@ -54,7 +54,7 @@ export class ShellComponent implements OnInit, OnDestroy {
   themeConvertor(themeId: string) {
     switch (themeId) {
       case '01d': {
-        console.log('clear sky');
+        // console.log('clear sky');
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
@@ -64,7 +64,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '02d': {
-        console.log('few clouds');
+        // console.log('few clouds');
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
@@ -75,7 +75,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '03d': {
-        console.log('scattered clouds');
+        // console.log('scattered clouds');
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
@@ -86,7 +86,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '04d': {
-        console.log('broken clouds');
+        // console.log('broken clouds');
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
@@ -97,7 +97,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '09d': {
-        console.log('shower rain');
+        // console.log('shower rain');
         this.theme = 'rainy';
         this.rain = true;
         this.snow = false;
@@ -108,7 +108,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '10d': {
-        console.log('rain');
+        // console.log('rain');
         this.theme = 'rainy';
         this.rain = true;
         this.snow = false;
@@ -119,7 +119,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '11d': {
-        console.log('thunderstorm');
+        // console.log('thunderstorm');
         this.theme = 'stormy';
         this.rain = true;
         this.snow = false;
@@ -130,7 +130,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '13d': {
-        console.log('snow');
+        // console.log('snow');
         this.theme = 'rainy';
         this.rain = false;
         this.snow = true;
@@ -141,7 +141,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '50d': {
-        console.log('mist');
+        // console.log('mist');
         this.theme = 'rainy';
         this.rain = false;
         this.snow = false;
@@ -153,7 +153,7 @@ export class ShellComponent implements OnInit, OnDestroy {
       }
       // night
       case '01n': {
-        console.log('clear sky night');
+        // console.log('clear sky night');
         this.theme = 'night';
         this.rain = false;
         this.snow = false;
@@ -164,7 +164,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '02n': {
-        console.log('few clouds night');
+        // console.log('few clouds night');
         this.theme = 'night';
         this.rain = false;
         this.snow = false;
@@ -175,7 +175,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '03n': {
-        console.log('scattered clouds night');
+        // console.log('scattered clouds night');
         this.theme = 'night';
         this.rain = false;
         this.snow = false;
@@ -186,7 +186,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '04n': {
-        console.log('broken clouds night');
+        // console.log('broken clouds night');
         this.theme = 'night';
         this.rain = false;
         this.snow = false;
@@ -197,7 +197,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '09n': {
-        console.log('shower rain night');
+        // console.log('shower rain night');
         this.theme = 'night';
         this.rain = true;
         this.snow = false;
@@ -208,7 +208,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '10n': {
-        console.log('rain night');
+        // console.log('rain night');
         this.theme = 'night';
         this.rain = true;
         this.snow = false;
@@ -219,7 +219,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '11n': {
-        console.log('thunderstorm night');
+        // console.log('thunderstorm night');
         this.theme = 'night';
         this.rain = true;
         this.snow = false;
@@ -229,7 +229,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '13n': {
-        console.log('snow night');
+        // console.log('snow night');
         this.rain = false;
         this.snow = true;
         this.fewClouds = false;
@@ -238,7 +238,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       case '50n': {
-        console.log('mist night');
+        // console.log('mist night');
         this.theme = 'rainy';
         this.rain = true;
         this.snow = true;
@@ -248,7 +248,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         break;
       }
       default: {
-        console.log('Invalid choice');
+        // console.log('Invalid choice');
         break;
       }
     }

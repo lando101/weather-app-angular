@@ -76,13 +76,13 @@ export class LocationSearchComponent implements OnInit {
           this.longitude = position.coords.longitude;
 
           this.foundCurrentLocation = true;
-          console.log(this.latitude);
-          console.log(this.longitude);
+          // console.log(this.latitude);
+          // console.log(this.longitude);
           this.zoom = 8;
           // this.loading.emit(true);
 
           this.getAddress(this.latitude, this.longitude);
-          console.log('There is location data');
+          // console.log('There is location data');
         },
         function error(error) {
           // alert('No data')
@@ -110,8 +110,8 @@ export class LocationSearchComponent implements OnInit {
     });
 
     this.weatherService.searchWeather(latitude, longitude).subscribe((data) => {
-      console.log(data);
-      console.log('GOV SEARCH RESULTS');
+      // console.log(data);
+      // console.log('GOV SEARCH RESULTS');
     });
 
     let options = {
@@ -134,8 +134,8 @@ export class LocationSearchComponent implements OnInit {
             this.zoom = 12;
             this.address = results[0].formatted_address;
             this.weatherService.setSearchLocation(results[0].address_components[2].short_name);
-            console.log(results[0]);
-            console.log('TYPES!!!!!!!!!!!!!!!!!!!');
+            // console.log(results[0]);
+            // console.log('TYPES!!!!!!!!!!!!!!!!!!!');
           } else {
             window.alert('No results found');
           }
@@ -147,16 +147,16 @@ export class LocationSearchComponent implements OnInit {
   }
 
   getWeatherData(latitude: number, longitude: number) {
-    this.weatherService.getAirQualityAPIv2(latitude, longitude).subscribe((data) => {
-      if (data) {
-        console.log(data);
-        this.weatherService.setAirQuality(data);
-        console.log('AIR QUALITY');
-      }
-    });
+    // this.weatherService.getAirQualityAPIv2(latitude, longitude).subscribe((data) => {
+    //   if (data) {
+    //     // console.log(data);
+    //     this.weatherService.setAirQuality(data);
+    //     // console.log('AIR QUALITY');
+    //   }
+    // });
     this.weatherService.getCurrentWeatherBackup(latitude, longitude).subscribe((data) => {
-      console.log(data);
-      console.log('OPEN WEATHER API WEATHER');
+      // console.log(data);
+      // console.log('OPEN WEATHER API WEATHER');
       if (data) {
         this.weatherService.setCurrentWeatherData(data);
         this.weatherService.setWeatherTheme(data?.current?.weather[0]?.icon);

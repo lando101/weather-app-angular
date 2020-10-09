@@ -22,8 +22,8 @@ export class WeatherDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.weatherService.getWeatherData().subscribe((data) => {
-      console.log(data);
-      console.log('WEATHER DASHBOARD GOT DATA');
+      // console.log(data);
+      // console.log('WEATHER DASHBOARD GOT DATA');
       this.weatherResults = {
         id: data.id,
         properties: {
@@ -44,8 +44,8 @@ export class WeatherDashboardComponent implements OnInit {
           },
         },
       };
-      console.log('WEATHER RESULTS');
-      console.log(this.weatherResults);
+      // console.log('WEATHER RESULTS');
+      // console.log(this.weatherResults);
     });
 
     this.weatherService.getCurrentWeatherData().subscribe((data) => {

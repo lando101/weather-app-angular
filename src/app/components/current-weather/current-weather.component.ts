@@ -59,8 +59,8 @@ export class CurrentWeatherComponent implements OnInit {
 
   ngOnInit(): void {
     this.weatherService.getWeatherTheme().subscribe((data) => {
-      console.log(data);
-      console.log('THEME');
+      // console.log(data);
+      // console.log('THEME');
       this.themeConvertor(data);
     });
     this.weatherService.getSearchLocationName().subscribe((data) => {
@@ -92,10 +92,10 @@ export class CurrentWeatherComponent implements OnInit {
 
     if (themeId.substr(themeId.length - 1, 1) === 'd') {
       this.themeService.setTheme(true);
-      console.log('LIGHT THEME');
+      // console.log('LIGHT THEME');
     } else if (themeId.substr(themeId.length - 1, 1) === 'n') {
       this.themeService.setTheme(false);
-      console.log('DARK THEME');
+      // console.log('DARK THEME');
     }
 
     switch (themeId) {

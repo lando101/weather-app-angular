@@ -31,13 +31,13 @@ export class DailyWeatherComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
-    console.log('DAILY');
-    console.log(this.currentWeatherData?.daily);
+    // console.log('DAILY');
+    // console.log(this.currentWeatherData?.daily);
     this.gaugeValueUV = this.currentWeatherData?.daily[0].uvi;
     this.currentWeatherData?.daily?.forEach((day) => {
       this.themeConvertor(day);
     });
-    console.log(this.currentWeatherData?.daily);
+    // console.log(this.currentWeatherData?.daily);
   }
   themeConvertor(day: any) {
     switch (day?.weather[0]?.icon) {

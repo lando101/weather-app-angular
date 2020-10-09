@@ -16,6 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CovidDashboardComponent } from '../components/covid-dashboard/covid-dashboard.component';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { WeatherAlertComponent, WeatherAlertSheetComponent } from '../components/weather-alert/weather-alert.component';
+// import { WeatherAlertSheetComponent } from '../components/weather-alert-sheet/weather-alert-sheet.component';
+
 // import { NgxLoadingModule } from 'ngx-loading';
 // import { ParticlesModule } from 'ngx-particle';
 
@@ -38,6 +41,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     DailyWeatherComponent,
     TemperatureConverterPipe,
     CovidDashboardComponent,
+    // WeatherAlertComponent,
+    // WeatherAlertSheetComponent
     // LocationSearchComponent,
   ],
   exports: [
@@ -48,7 +53,13 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     DailyWeatherComponent,
     TemperatureConverterPipe,
     CovidDashboardComponent,
+    // WeatherAlertComponent,
+    // WeatherAlertSheetComponent
     // LocationSearchComponent,
   ],
+  // entryComponents: [WeatherAlertSheetComponent, WeatherAlertComponent],
+  // bootstrap: [WeatherAlertComponent],
+
+  // providers: [WeatherAlertSheetComponent]
 })
 export class SharedModule {}

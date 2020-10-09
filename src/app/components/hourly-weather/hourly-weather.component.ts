@@ -138,63 +138,63 @@ export class HourlyWeatherComponent implements OnInit {
     switch (hour?.weather[0]?.icon) {
       // day
       case '01d': {
-        console.log('clear sky');
+        // console.log('clear sky');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fsunny%5B1%5D.png?alt=media&token=7baa0ed6-94d1-4ddd-82e5-fd1c9b287176';
         hour.night = false;
         break;
       }
       case '02d': {
-        console.log('few clouds');
+        // console.log('few clouds');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fmostlysunny%5B1%5D.png?alt=media&token=2e7140b4-546c-4d26-90e5-a6df49e0c86b';
         hour.night = false;
         break;
       }
       case '03d': {
-        console.log('scattered clouds');
+        // console.log('scattered clouds');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fmostlycloudy%5B1%5D.png?alt=media&token=8eec628c-0276-44ad-959f-5206759642b2';
         hour.night = false;
         break;
       }
       case '04d': {
-        console.log('broken clouds');
+        // console.log('broken clouds');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fmostlycloudy%5B1%5D.png?alt=media&token=8eec628c-0276-44ad-959f-5206759642b2';
         hour.night = false;
         break;
       }
       case '09d': {
-        console.log('shower rain');
+        // console.log('shower rain');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fchancerain%5B1%5D.png?alt=media&token=59dfd17f-0cdb-413d-860c-3eda8c95e430';
         hour.night = false;
         break;
       }
       case '10d': {
-        console.log('rain');
+        // console.log('rain');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Frain%5B1%5D.png?alt=media&token=c4dba601-4693-424d-8b1c-1497abc258ec';
         hour.night = false;
         break;
       }
       case '11d': {
-        console.log('thunderstorm');
+        // console.log('thunderstorm');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Ftstorms%5B1%5D.png?alt=media&token=5f9e0b58-86fe-47da-b781-a0b300dc74f1';
         hour.night = false;
         break;
       }
       case '13d': {
-        console.log('snow');
+        // console.log('snow');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fchancesnow.png?alt=media&token=1c0581d1-7e74-4937-a2d2-7af2cbc2b97e';
         hour.night = false;
         break;
       }
       case '50d': {
-        console.log('mist');
+        // console.log('mist');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Ffog%5B1%5D.png?alt=media&token=262f0bcd-5575-44a7-accd-1d0b865a03b5';
         hour.night = false;
@@ -203,70 +203,70 @@ export class HourlyWeatherComponent implements OnInit {
 
       // night
       case '01n': {
-        console.log('clear sky night');
+        // console.log('clear sky night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fnt_clear.png?alt=media&token=f70a70a0-d004-48d4-a47d-ccfbe5e2530a';
         hour.night = true;
         break;
       }
       case '02n': {
-        console.log('few clouds night');
+        // console.log('few clouds night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fnt_partlycloudy%5B1%5D.png?alt=media&token=f44b9148-33a0-4cf6-b639-e5aabe9b4c43';
         hour.night = true;
         break;
       }
       case '03n': {
-        console.log('scattered clouds night');
+        // console.log('scattered clouds night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fnt_partlycloudy%5B1%5D.png?alt=media&token=f44b9148-33a0-4cf6-b639-e5aabe9b4c43';
         hour.night = true;
         break;
       }
       case '04n': {
-        console.log('broken clouds night');
+        // console.log('broken clouds night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fnt_partlycloudy%5B1%5D.png?alt=media&token=f44b9148-33a0-4cf6-b639-e5aabe9b4c43';
         hour.night = true;
         break;
       }
       case '09n': {
-        console.log('shower rain night');
+        // console.log('shower rain night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fchancerain%5B1%5D.png?alt=media&token=59dfd17f-0cdb-413d-860c-3eda8c95e430';
         hour.night = true;
         break;
       }
       case '10n': {
-        console.log('rain night');
+        // console.log('rain night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Frain%5B1%5D.png?alt=media&token=c4dba601-4693-424d-8b1c-1497abc258ec';
         hour.night = true;
         break;
       }
       case '11n': {
-        console.log('thunderstorm night');
+        // console.log('thunderstorm night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Ftstorms%5B1%5D.png?alt=media&token=5f9e0b58-86fe-47da-b781-a0b300dc74f1';
         hour.night = true;
         break;
       }
       case '13n': {
-        console.log('snow night');
+        // console.log('snow night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Fchancesnow.png?alt=media&token=1c0581d1-7e74-4937-a2d2-7af2cbc2b97e';
         hour.night = true;
         break;
       }
       case '50n': {
-        console.log('mist night');
+        // console.log('mist night');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Ffog%5B1%5D.png?alt=media&token=262f0bcd-5575-44a7-accd-1d0b865a03b5';
         hour.night = true;
         break;
       }
       default: {
-        console.log('Invalid choice');
+        // console.log('Invalid choice');
         hour.iconUrl =
           'https://firebasestorage.googleapis.com/v0/b/weather-app-d5f91.appspot.com/o/weather-icons%2Funknown%5B1%5D.png?alt=media&token=ee7488b6-1195-496f-9c85-db9d22b10319';
         hour.night = false;
