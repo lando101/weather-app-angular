@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, of, Subscription, throwError } from 'rxjs'
 import { map, catchError } from 'rxjs/operators';
 import { AQI } from '../models/aqi.model';
 import { OpenCurrentWeather } from '../models/open-weather-current.model';
+import { WeatherAlerts } from 'src/models/weather-alerts.model';
 const routes = {
   quote: (c: CoordinatesContext) =>
     `/nearest_city?lat=${c.latitude}&lon=${c.longitude}&key=876120fd-e122-4145-944b-8b44f8454ce5`,
@@ -53,7 +54,7 @@ export class WeatherGovService {
   //   );
   // }
 
-  searchWeather(latitude: number, longitude: number): Observable<any> {
+  searchNWSWeather(latitude: number, longitude: number): Observable<any> {
     const headers = new HttpHeaders();
     headers.set('Access-Control-Allow-Origin', '*');
     headers.set('Access-Control-Allow-Methods', 'GET');
@@ -71,6 +72,22 @@ export class WeatherGovService {
   //   let currentWeather = this.httpClient.get(url);
   //   return currentWeather;
   // }
+
+  getWeatherAlerts(state: string): Observable<any> {
+    const headers = new HttpHeaders();
+    headers.set('Access-Control-Allow-Origin', '*');
+    headers.set('Access-Control-Allow-Methods', 'GET');
+    headers.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    const url = 'https://api.weather.gov/alerts/active?area=' + state;
+
+    let weatherAlerts = this.httpClient.get(url, { headers });
+
+    return weatherAlerts.pipe(
+      map((data: WeatherAlerts) => {
+        return data;
+      })
+    );
+  }
 
   // gather current weather from Open Weather API
   getCurrentWeatherBackup(lat: number, lon: number): Observable<any> {
@@ -150,11 +167,11 @@ export class WeatherGovService {
     return forecast;
   }
 
-  setWeatherData(weatherData: any): void {
+  setNWSWeatherData(weatherData: any): void {
     this.weatherInfo.next(weatherData);
   }
 
-  getWeatherData(): Observable<any> {
+  getNWSWeatherData(): Observable<any> {
     return this.weatherInfo.asObservable();
   }
 

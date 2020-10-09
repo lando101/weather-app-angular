@@ -105,14 +105,16 @@ export class LocationSearchComponent implements OnInit {
   // }
 
   getAddress(latitude: number, longitude: number) {
-    this.weatherService.searchWeather(latitude, longitude).subscribe((data) => {
-      this.weatherService.setWeatherData(data);
+    this.weatherService.searchNWSWeather(latitude, longitude).subscribe((data) => {
+      this.weatherService.setNWSWeatherData(data);
+      console.log(data);
+      console.log('GOV SEARCH RESULTS');
     });
 
-    this.weatherService.searchWeather(latitude, longitude).subscribe((data) => {
-      // console.log(data);
-      // console.log('GOV SEARCH RESULTS');
-    });
+    // this.weatherService.searchWeather(latitude, longitude).subscribe((data) => {
+    //   // console.log(data);
+    //   // console.log('GOV SEARCH RESULTS');
+    // });
 
     let options = {
       types: ['(cities)'],

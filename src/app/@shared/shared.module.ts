@@ -16,7 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CovidDashboardComponent } from '../components/covid-dashboard/covid-dashboard.component';
 import { NgxGaugeModule } from 'ngx-gauge';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { WeatherAlertComponent, WeatherAlertSheetComponent } from '../components/weather-alert/weather-alert.component';
+import { WeatherAlertComponent } from '../components/weather-alert/weather-alert.component';
 // import { WeatherAlertSheetComponent } from '../components/weather-alert-sheet/weather-alert-sheet.component';
 
 // import { NgxLoadingModule } from 'ngx-loading';
@@ -41,6 +41,7 @@ import { WeatherAlertComponent, WeatherAlertSheetComponent } from '../components
     DailyWeatherComponent,
     TemperatureConverterPipe,
     CovidDashboardComponent,
+    WeatherAlertComponent,
     // WeatherAlertComponent,
     // WeatherAlertSheetComponent
     // LocationSearchComponent,
@@ -53,6 +54,7 @@ import { WeatherAlertComponent, WeatherAlertSheetComponent } from '../components
     DailyWeatherComponent,
     TemperatureConverterPipe,
     CovidDashboardComponent,
+    WeatherAlertComponent,
     // WeatherAlertComponent,
     // WeatherAlertSheetComponent
     // LocationSearchComponent,

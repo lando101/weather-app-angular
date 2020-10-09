@@ -52,6 +52,7 @@
     "ngx-particle": "^1.5.0",
     "ngx-skeleton-loader": "^2.4.4",
     "ngx-slick-carousel": "^0.5.1",
+    "ngx-toastr": "^13.1.0",
     "oauth": "^0.9.15",
     "particles.js": "^2.0.0",
     "rxjs": "^6.6.2",

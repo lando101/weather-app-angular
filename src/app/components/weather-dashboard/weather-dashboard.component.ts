@@ -21,7 +21,7 @@ export class WeatherDashboardComponent implements OnInit {
   constructor(private weatherService: WeatherGovService) {}
 
   ngOnInit(): void {
-    this.weatherService.getWeatherData().subscribe((data) => {
+    this.weatherService.getNWSWeatherData().subscribe((data) => {
       // console.log(data);
       // console.log('WEATHER DASHBOARD GOT DATA');
       this.weatherResults = {
