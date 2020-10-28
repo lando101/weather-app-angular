@@ -17,6 +17,7 @@ export class ShellComponent implements OnInit, OnDestroy {
   rain = false;
   snow = false;
   fewClouds = false;
+  cloudy = false;
   fog = false;
   day = false;
   constructor(private media: MediaObserver, private weatherService: WeatherGovService) {}
@@ -61,6 +62,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.fewClouds = false;
         this.day = true;
         this.fog = false;
+        this.cloudy = false;
         break;
       }
       case '02d': {
@@ -71,6 +73,8 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.fewClouds = true;
         this.day = true;
         this.fog = false;
+        this.cloudy = false;
+
         console.log(this.day + 'DAY');
         break;
       }
@@ -79,8 +83,9 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
-        this.fewClouds = true;
+        this.fewClouds = false;
         this.day = true;
+        this.cloudy = false;
         this.fog = false;
 
         break;
@@ -90,8 +95,9 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.theme = 'day-clear';
         this.rain = false;
         this.snow = false;
-        this.fewClouds = true;
+        this.fewClouds = false;
         this.day = true;
+        this.cloudy = true;
         this.fog = false;
 
         break;
@@ -103,6 +109,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.snow = false;
         this.fewClouds = false;
         this.day = true;
+        this.cloudy = false;
         this.fog = false;
 
         break;
@@ -114,6 +121,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.snow = false;
         this.fewClouds = false;
         this.day = true;
+        this.cloudy = false;
         this.fog = false;
 
         break;
@@ -125,6 +133,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.snow = false;
         this.fewClouds = false;
         this.day = true;
+        this.cloudy = false;
         this.fog = false;
 
         break;
@@ -135,6 +144,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = true;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = true;
         this.fog = false;
 
@@ -146,6 +156,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = false;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = true;
         this.fog = true;
 
@@ -158,6 +169,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = false;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -169,6 +181,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = false;
         this.fewClouds = true;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -180,6 +193,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = false;
         this.fewClouds = true;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -191,6 +205,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = false;
         this.fewClouds = true;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -202,6 +217,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = true;
         this.snow = false;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -213,6 +229,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = true;
         this.snow = false;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
 
@@ -224,6 +241,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = true;
         this.snow = false;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
         break;
@@ -233,6 +251,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = false;
         this.snow = true;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = false;
         break;
@@ -243,6 +262,7 @@ export class ShellComponent implements OnInit, OnDestroy {
         this.rain = true;
         this.snow = true;
         this.fewClouds = false;
+        this.cloudy = false;
         this.day = false;
         this.fog = true;
         break;

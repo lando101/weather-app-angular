@@ -17,10 +17,13 @@
       </nav>
     </mat-sidenav>
     <mat-sidenav-content class="scroll scroll2 w-100">
+      <!-- weather themes -->
       <app-rain *ngIf="rain" [conditions]="rain"></app-rain>
       <app-broken-clouds *ngIf="fewClouds" [day]="day" [conditions]="fewClouds"></app-broken-clouds>
       <app-night-sky [day]="day"></app-night-sky>
       <app-fog *ngIf="fog"></app-fog>
+      <app-solid-clouds *ngIf="cloudy"></app-solid-clouds>
+      <!-- weather themes -->
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

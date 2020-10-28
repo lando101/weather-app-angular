@@ -16,6 +16,7 @@ import { NgParticlesModule } from 'ng-particles';
 import { LocationSearchComponent } from '@app/components/location-search/location-search.component';
 import { LoaderComponent } from '@app/@shared/loader/loader.component';
 import { FogComponent } from './fog/fog.component';
+import { SolidCloudsComponent } from './solid-clouds/solid-clouds.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { FogComponent } from './fog/fog.component';
     LocationSearchComponent,
     LoaderComponent,
     FogComponent,
+    SolidCloudsComponent,
   ],
 })
 export class ShellModule {}
